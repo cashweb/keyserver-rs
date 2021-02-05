@@ -10,34 +10,36 @@ monitoring = ["prometheus", "prometheus-static-metric"]
 
 [dependencies]
 async_zmq = "0.3.2"
-base64 = "0.12.3"
+base64 = "0.13.0"
 bitcoincash-addr = "0.5.2"
-bytes = "0.5.6"
-cashweb = "0.1.0-alpha.6"
-clap = { version = "2.33.1", features = ["yaml"] }
+bytes = "1.0.1"
+cashweb = "0.1.0-alpha.10"
+clap = { version = "2.33.3", features = ["yaml"] }
 config = "0.10.1"
-dashmap = "3.11.10"
+dashmap = "4.0.2"
 dirs = "3.0.1"
-futures = "0.3.5"
+futures = "0.3.12"
 hex = "0.4.2"
-http = "0.2.1"
-hyper = "0.13.7"
-hyper-tls = "0.4.3"
+http = "0.2.3"
+hyper = "0.14.2"
+hyper-tls = "0.5.0"
 lazy_static = "1.4.0"
-prost = "0.6.1"
-prometheus = { version = "0.9.0", optional = true }
-prometheus-static-metric = { version = "0.2.0", optional = true }
-ring = "0.16.15"
-rocksdb = "0.14.0"
-serde = { version = "1.0.114", features = ["derive"] }
-subtle = "2.2.3"
-thiserror = "1.0.20"
-tracing = "0.1.18"
-tracing-subscriber = "0.2.10"
-tokio = { version = "0.2.22", features = ["blocking",  "macros", "rt-core", "rt-threaded", "sync", "time"] }
-tower-service = "0.3.0"
-url = "2.1.1"
-warp = "0.2.4"
+prost = "0.7.0"
+prometheus = { version = "0.11.0", optional = true }
+prometheus-static-metric = { version = "0.5.1", optional = true }
+ring = "0.16.19"
+rocksdb = "0.15.0"
+serde = { version = "1.0.123", features = ["derive"] }
+thiserror = "1.0.23"
+tracing = "0.1.22"
+tracing-subscriber = "0.2.15"
+tower-service = "0.3.1"
+url = "2.2.0"
+warp = "0.3.0"
+
+[dependencies.tokio]
+version = "1.1.1"
+features = ["macros", "rt", "rt-multi-thread", "sync", "time"]
 
 [build-dependencies]
-prost-build = "0.6.1"
+prost-build = "0.7.0"

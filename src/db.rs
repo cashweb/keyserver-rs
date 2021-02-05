@@ -1,6 +1,6 @@
 use std::sync::Arc;
 
-use prost::Message as _;
+use prost::Message;
 use rocksdb::{Error as RocksError, Options, DB};
 
 use crate::models::{database::DatabaseWrapper, keyserver::Peers};
